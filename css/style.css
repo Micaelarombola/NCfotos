@@ -127,6 +127,7 @@ body {
 .services {
     padding: 50px 20px;
     text-align: center;
+    background-color: #4B3621; /* Fondo marrón oscuro y natural */
 }
 
 .service-item {
@@ -136,7 +137,8 @@ body {
     margin: 20px;
     border-radius: 8px;
     overflow: hidden;
-    background: #2d2d2d; /* Fondo oscuro para destacar el contenido */
+    background: #4B3621; /* Mismo marrón oscuro para unificar */
+    border: 2px solid #6A4B32; /* Borde alrededor de cada servicio */
 }
 
 .service-title {
@@ -144,7 +146,7 @@ body {
     font-size: 1.5rem;
     color: #f4f4f4;
     text-align: center;
-    background: #333; /* Fondo oscuro para el título */
+    background: #4B3621; /* Mismo marrón oscuro para el título */
     padding: 10px;
     border-radius: 5px;
 }
@@ -153,6 +155,7 @@ body {
     position: relative;
     overflow: hidden;
     border-radius: 8px;
+    border: 2px solid #6A4B32; /* Borde alrededor de la imagen */
 }
 
 .image-container img {
@@ -161,19 +164,18 @@ body {
     display: block;
     transition: transform 0.4s ease, box-shadow 0.4s ease, filter 0.4s ease;
     filter: brightness(100%); /* Ajusta el brillo inicial */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra inicial */
+    box-shadow: none; /* Quita la sombra para hacer que el borde destaque */
 }
 
 .image-container img:hover {
     transform: scale(1.1); /* Aumenta el tamaño de la imagen */
     filter: brightness(80%); /* Reduce el brillo al pasar el cursor */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Aumenta la sombra */
 }
 
 .service-text {
     padding: 15px;
     color: #f4f4f4;
-    background: #333; /* Fondo oscuro para el texto */
+    background: #4B3621; /* Mismo marrón oscuro para el texto */
     border-radius: 0 0 8px 8px;
     font-size: 1rem;
     text-align: center;
@@ -181,47 +183,47 @@ body {
 
 /* Estilos para la sección de Preguntas Frecuentes */
 .faq {
-    padding: 50px 20px;
+    padding: 30px 15px;
     background-color: #2e3a2a; /* Verde oscuro mate */
     color: #e0e0e0; /* Texto claro */
 }
 
 .faq h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
+    font-size: 2rem; /* Tamaño de fuente más pequeño */
+    margin-bottom: 15px;
     color: #a8d5ba; /* Verde suave */
     text-align: center;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra de texto para mayor contraste */
+    font-weight: 600; /* Negrita para mayor impacto */
+    text-transform: uppercase; /* Mayúsculas para un estilo más definido */
+    letter-spacing: 1.5px; /* Espaciado de letras */
 }
 
 .faq-item {
-    margin-bottom: 20px;
-    padding: 15px;
+    margin-bottom: 15px;
+    padding: 10px 20px; /* Padding más pequeño */
     background-color: #3a4d3c; /* Verde más oscuro */
-    border-radius: 8px;
+    border-left: 5px solid #a8d5ba; /* Línea decorativa a la izquierda */
+    border-radius: 5px;
     transition: background-color 0.3s, transform 0.3s;
 }
 
 .faq-item:hover {
     background-color: #4a5a4b; /* Verde más claro al pasar el cursor */
-    transform: scale(1.02); /* Efecto de escala al pasar el cursor */
+    transform: translateX(5px); /* Efecto de desplazamiento al pasar el cursor */
 }
 
 .faq-item h3 {
-    font-size: 1.8rem;
-    margin-bottom: 10px;
-    color: #000; /* Texto negro */
-    transition: color 0.3s;
-}
-
-.faq-item h3:hover {
-    color: #a8d5ba; /* Verde suave al pasar el cursor */
+    font-size: 1.5rem; /* Tamaño de fuente más pequeño */
+    margin-bottom: 8px;
+    color: #f4f4f4; /* Texto claro */
+    font-weight: 500; /* Peso de fuente intermedio */
 }
 
 .faq-item p {
-    font-size: 1rem;
-    color: #000; /* Texto negro */
-    line-height: 1.6;
+    font-size: 0.9rem; /* Texto más pequeño */
+    color: #cfcfcf; /* Texto gris claro */
+    line-height: 1.5;
+    margin: 5px 0 0 0;
 }
 
 /* Estilo del pie de página */
@@ -694,4 +696,53 @@ footer {
 .footer-social-links a:hover {
     color: #a8d5ba; /* Verde suave al pasar el cursor */
     transform: scale(1.1); /* Efecto de aumento al pasar el cursor */
+}
+/* RESPONSIVE*/
+
+.hero {
+    padding: 5% 0;
+    height: auto; /* Ajusta la altura en función del contenido */
+}
+
+.hero-text h1 {
+    font-size: 3rem; /* Tamaño ajustado para pantallas pequeñas */
+}
+
+.hero-text p {
+    font-size: 1.2rem; /* Tamaño ajustado para pantallas pequeñas */
+}
+
+@media (max-width: 768px) {
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+
+    .hero-text p {
+        font-size: 1rem;
+    }
+}
+.gallery-item {
+    flex: 1 1 calc(33.33% - 10px); /* Tres elementos por fila */
+}
+
+@media (max-width: 768px) {
+    .gallery-item {
+        flex: 1 1 calc(50% - 10px); /* Dos elementos por fila en pantallas medianas */
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-item {
+        flex: 1 1 100%; /* Un elemento por fila en pantallas pequeñas */
+    }
+}
+.contact-info {
+    flex-direction: column;
+    gap: 10px;
+}
+
+@media (min-width: 768px) {
+    .contact-info {
+        flex-direction: row;
+    }
 }
